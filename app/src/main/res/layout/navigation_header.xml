@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rLayout_navigation_header"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/head_bk">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true">
+
+        <com.example.clark.tabdemo.utils.RoundImage
+            android:id="@+id/img_navigation_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/icon_me" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/img_navigation_icon"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="10dp"
+            android:text="Better Man,"
+            android:textSize="30dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
