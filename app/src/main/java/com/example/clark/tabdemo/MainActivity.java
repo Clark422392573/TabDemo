@@ -3,7 +3,6 @@ package com.example.clark.tabdemo;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -30,7 +29,6 @@ import android.widget.Toast;
 
 import com.example.clark.tabdemo.listener.OnTabSelectListener;
 import com.example.clark.tabdemo.personaldata.PersonalDataActivity;
-import com.example.clark.tabdemo.tablayout.SegmentTabLayout;
 import com.example.clark.tabdemo.utils.ViewFindUtils;
 
 import java.util.ArrayList;
