@@ -30,8 +30,11 @@ import android.widget.Toast;
 import com.example.clark.tabdemo.listener.OnTabSelectListener;
 import com.example.clark.tabdemo.personaldata.PersonalDataActivity;
 import com.example.clark.tabdemo.utils.ViewFindUtils;
+import com.example.clark.tabdemo.view.SatelliteMenu;
+import com.example.clark.tabdemo.view.SatelliteMenuItem;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -73,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.inject(this);
+
+        sateMenu();
 
         mFragments.add(new MainFragment());
         mFragments.add(new NextFragment());
@@ -159,6 +164,25 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    private void sateMenu() {
+        SatelliteMenu menu = (SatelliteMenu) findViewById(R.id.menu);
+        List<SatelliteMenuItem> items = new ArrayList<>();
+        items.add(new SatelliteMenuItem(0, R.mipmap.ic_1));
+        items.add(new SatelliteMenuItem(1, R.mipmap.ic_3));
+        items.add(new SatelliteMenuItem(2, R.mipmap.ic_4));
+        items.add(new SatelliteMenuItem(3, R.mipmap.ic_5));
+        items.add(new SatelliteMenuItem(4, R.mipmap.ic_6));
+        items.add(new SatelliteMenuItem(5, R.mipmap.ic_2));
+        items.add(new SatelliteMenuItem(6, R.mipmap.sat_item));
+        menu.addItems(items);
+
+        menu.setOnItemClickedListener(new SatelliteMenu.SateliteClickedListener() {
+            public void eventOccured(int id) {
+                Toast.makeText(MainActivity.this, "id:" + id, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
