@@ -18,6 +18,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -210,7 +211,8 @@ public class MainActivity extends AppCompatActivity {
     private void showPopupWindow() {
         String[] listContent = {"发起多人聊天", "添加好友", "扫一扫"};
         View contentView = LayoutInflater.from(this).inflate(R.layout.pop_window, null);
-        mPopupWindow = new PopupWindow(contentView, 300, 300);
+        mPopupWindow = new PopupWindow(contentView,
+                500, WindowManager.LayoutParams.WRAP_CONTENT);
         mPopList = (ListView) contentView.findViewById(R.id.list_view_in_pop_window);
         mPopList.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listContent));
         mPopList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
