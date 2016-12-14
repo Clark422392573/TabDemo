@@ -2,7 +2,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
     tools:context=".NextFragment">
+
+    <com.example.clark.tabdemo.tablayout.SegmentTabLayout
+        android:id="@+id/next_fragment_tab"
+        android:layout_width="200dp"
+        android:layout_height="36dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        tl:tl_indicator_anim_enable="true"
+        tl:tl_indicator_bounce_enable="true"
+        tl:tl_indicator_color="@android:color/holo_blue_light"
+        tl:tl_tab_padding="20dp"/>
 
     <TextView
         android:id="@+id/next_fragment_text"
