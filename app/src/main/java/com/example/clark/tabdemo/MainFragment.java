@@ -9,21 +9,23 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.clark.tabdemo.tablayout.SegmentTabLayout;
+import com.example.clark.tabdemo.utils.ViewFindUtils;
+
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
+
 @SuppressLint("ValidFragment")
 public class MainFragment extends Fragment {
 
     @InjectView(R.id.main_fragment_text)
     TextView mainFragmentText;
-    private String mTitle;
+    @InjectView(R.id.main_fragment_tab)
+    SegmentTabLayout mainFragmentTab;
 
-    public static MainFragment getInstance(String title) {
-        MainFragment mMainFragment = new MainFragment();
-        mMainFragment.mTitle = title;
-        return mMainFragment;
-    }
+    private String[] mTitles = {"翔大王", "万岁"};
+    private View mDecorView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -34,7 +36,8 @@ public class MainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main, container, false);
         ButterKnife.inject(this, view);
-
+        mainFragmentTab.setTabData(mTitles);
+        mainFragmentTab.showDot(1);
         return view;
     }
 
@@ -46,7 +49,6 @@ public class MainFragment extends Fragment {
 
     @OnClick(R.id.main_fragment_text)
     public void onClick() {
-
         Toast.makeText(getContext(), "main", Toast.LENGTH_SHORT).show();
     }
 }
