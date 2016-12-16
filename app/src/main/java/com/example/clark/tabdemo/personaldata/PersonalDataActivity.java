@@ -2,7 +2,7 @@ package com.example.clark.tabdemo.personaldata;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.drawable.ColorDrawable;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -13,11 +13,15 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
+import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
+
 import com.example.clark.tabdemo.R;
+import com.example.clark.tabdemo.utils.OnScrollListener;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -26,10 +30,16 @@ import java.io.IOException;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public class PersonalDataActivity extends AppCompatActivity implements View.OnClickListener {
+public class PersonalDataActivity extends AppCompatActivity implements View.OnClickListener, OnScrollListener.ScrollViewListener {
 
     @InjectView(R.id.img_personal_bk)
     ImageView imgPersonalBk;
+    @InjectView(R.id.my_Scroll_personal)
+    OnScrollListener myScrollPersonal;
+    @InjectView(R.id.rlayout_personal)
+    RelativeLayout rlayoutPersonal;
+    @InjectView(R.id.llayout_personal)
+    LinearLayout llayoutPersonal;
     private ImageView imgPersonalIcon;
     private Button btnLocal, btnPhotograph, btnCancel;
     private PopupWindow mChangePopupWindow;
@@ -51,6 +61,8 @@ public class PersonalDataActivity extends AppCompatActivity implements View.OnCl
         imgPersonalIcon = (ImageView) findViewById(R.id.img_personal_icon);
         imgPersonalIcon.setOnClickListener(this);
         imgPersonalBk.setOnClickListener(this);
+
+        slidePictureColor();
     }
 
     @Override
@@ -184,6 +196,30 @@ public class PersonalDataActivity extends AppCompatActivity implements View.OnCl
                 break;
             default:
                 break;
+        }
+    }
+
+    private int height;
+
+    private void slidePictureColor() {
+        ViewTreeObserver observer = rlayoutPersonal.getViewTreeObserver();
+        observer.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                rlayoutPersonal.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+                height = rlayoutPersonal.getHeight();
+                rlayoutPersonal.getWidth();
+                myScrollPersonal.setScrollViewListener(PersonalDataActivity.this);
+            }
+        });
+    }
+
+    @Override
+    public void onScrollChanged(OnScrollListener scrollView, int x, int y, int oldx, int oldy) {
+        if (y <= height) {
+            float scale = (float) y / height;
+            float alpha = (255 * scale);
+            llayoutPersonal.setBackgroundColor(Color.argb((int) alpha, 0x00, 0xBF, 0xFF));
         }
     }
 }

@@ -50,7 +50,8 @@ public class MainParticularsActivity extends AppCompatActivity {
         particularsRecyclerView.setAlpha(0);
     }
 
-    @Override public void onWindowFocusChanged(boolean hasFocus) {
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
         if (isFirst) {
             for (int i = 0; i < particularsViewpager.getChildCount(); i++) {
@@ -74,7 +75,8 @@ public class MainParticularsActivity extends AppCompatActivity {
             views = new ArrayList<>();
             views.add(View.inflate(MainParticularsActivity.this, R.layout.item_img, null));
             views.get(0).findViewById(R.id.btn_buy).setOnClickListener(new View.OnClickListener() {
-                @Override public void onClick(View v) {
+                @Override
+                public void onClick(View v) {
                     Toast.makeText(MainParticularsActivity.this, "buy", Toast.LENGTH_SHORT).show();
                 }
             });
@@ -84,33 +86,39 @@ public class MainParticularsActivity extends AppCompatActivity {
         }
 
         private ArrayList<View> views;
-        private int[] imgs = { R.mipmap.cate, R.mipmap.pictwo, R.mipmap.picthree };
+        private int[] imgs = {R.mipmap.cate, R.mipmap.pictwo, R.mipmap.picthree};
 
-        @Override public int getCount() {
+        @Override
+        public int getCount() {
             return views.size();
         }
 
-        @Override public boolean isViewFromObject(View view, Object object) {
+        @Override
+        public boolean isViewFromObject(View view, Object object) {
             return view == object;
         }
 
-        @Override public Object instantiateItem(ViewGroup container, int position) {
+        @Override
+        public Object instantiateItem(ViewGroup container, int position) {
             views.get(position).findViewById(R.id.imageView).setBackgroundResource(imgs[position]);
             container.addView(views.get(position));
 
             return views.get(position);
         }
 
-        @Override public void destroyItem(ViewGroup container, int position, Object object) {
+        @Override
+        public void destroyItem(ViewGroup container, int position, Object object) {
             container.removeView(views.get(position));
         }
     }
 
-    @Override protected void onResume() {
+    @Override
+    protected void onResume() {
         super.onResume();
     }
 
-    @Override public void onBackPressed() {
+    @Override
+    public void onBackPressed() {
 
         if (particularsZoomheader.isExpand()) {
             particularsZoomheader.restore(particularsZoomheader.getY());

@@ -34,7 +34,6 @@ class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
   @Override
   public void onBindViewHolder(ViewHolder holder, int position) {
     // 解析
-
   }
 
   @Override
