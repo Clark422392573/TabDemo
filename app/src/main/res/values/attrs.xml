@@ -222,4 +222,19 @@
         <!-- 圆角矩形宽高相等,取较宽高中大值-->
         <attr name="mv_isWidthHeightEqual" format="boolean"/>
     </declare-styleable>
+
+
+    <declare-styleable name="CardStackView">
+        <attr name="stackOverlapGaps" format="dimension"/>
+        <attr name="stackOverlapGapsCollapse" format="dimension"/>
+        <attr name="stackHeaderHeight" format="dimension"/>
+        <attr name="stackDuration" format="integer"/>
+        <attr name="stackNumBottomShow" format="integer"/>
+        <attr name="stackAnimationType">
+            <flag name="allDown" value="0" />
+            <flag name="upDown" value="1" />
+            <flag name="upDownStack" value="2" />
+        </attr>
+    </declare-styleable>
+
 </resources>

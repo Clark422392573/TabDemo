@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
     tools:context=".personaldata.PersonalDataActivity">
 
     <com.example.clark.tabdemo.utils.OnScrollListener
@@ -55,5 +56,15 @@
             android:src="@mipmap/img_bk" />
 
     </LinearLayout>
+
+    <com.example.clark.tabdemo.tablayout.SegmentTabLayout
+        android:id="@+id/personal_tab"
+        android:layout_width="200dp"
+        android:layout_height="36dp"
+        android:layout_centerInParent="true"
+        tl:tl_indicator_anim_enable="true"
+        tl:tl_indicator_bounce_enable="true"
+        tl:tl_indicator_color="@android:color/holo_blue_light"
+        tl:tl_tab_padding="20dp"/>
 
 </RelativeLayout>

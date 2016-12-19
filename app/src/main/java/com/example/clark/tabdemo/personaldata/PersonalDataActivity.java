@@ -21,6 +21,7 @@ import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 
 import com.example.clark.tabdemo.R;
+import com.example.clark.tabdemo.tablayout.SegmentTabLayout;
 import com.example.clark.tabdemo.utils.OnScrollListener;
 
 import java.io.ByteArrayOutputStream;
@@ -40,6 +41,8 @@ public class PersonalDataActivity extends AppCompatActivity implements View.OnCl
     RelativeLayout rlayoutPersonal;
     @InjectView(R.id.llayout_personal)
     LinearLayout llayoutPersonal;
+    @InjectView(R.id.personal_tab)
+    SegmentTabLayout personalTab;
     private ImageView imgPersonalIcon;
     private Button btnLocal, btnPhotograph, btnCancel;
     private PopupWindow mChangePopupWindow;
@@ -52,6 +55,8 @@ public class PersonalDataActivity extends AppCompatActivity implements View.OnCl
     private Bitmap photo;
     private byte[] bytes;
 
+    private String[] mTitles = {"翔大王", "万岁"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +68,9 @@ public class PersonalDataActivity extends AppCompatActivity implements View.OnCl
         imgPersonalBk.setOnClickListener(this);
 
         slidePictureColor();
+
+        personalTab.setTabData(mTitles);
+        personalTab.showDot(1);
     }
 
     @Override
@@ -219,7 +227,7 @@ public class PersonalDataActivity extends AppCompatActivity implements View.OnCl
         if (y <= height) {
             float scale = (float) y / height;
             float alpha = (255 * scale);
-            llayoutPersonal.setBackgroundColor(Color.argb((int) alpha, 0x00, 0xBF, 0xFF));
+            llayoutPersonal.setBackgroundColor(Color.argb((int) alpha, 0xD6, 0xD6, 0xD6));
         }
     }
 }
