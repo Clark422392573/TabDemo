@@ -1,4 +1,4 @@
-package com.example.clark.tabdemo.view;
+package com.example.clark.tabdemo.satelitemenu;
 
 /**
  * Default provider for degrees between satellites. For number of satellites up to 3

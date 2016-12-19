@@ -67,8 +67,10 @@
 
         <com.example.clark.tabdemo.zoomheader.ZoomHeaderViewPager
             android:id="@+id/particulars_viewpager"
-            android:layout_width="300dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
             android:clipChildren="false" />
 
     </com.example.clark.tabdemo.zoomheader.ZoomHeaderView>

@@ -13,7 +13,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="推荐菜"
+        android:text="农作物多样性种植提高"
         android:textColor="#000"
         android:textSize="16sp" />
 
@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="酸菜鱼 茄子豆角 千页豆腐 小笼包 鱼头排骨 茶叶虾"
+        android:text="“生态技术在农业生产领域的应用不仅可以使农产品更安全，而且能保持自然生态平衡，保护自然环境，具有重大的社会价值。”陈桂华认为，这项技术的研究和应用与当前创新、协调、绿色等发展理念都相吻合。在初始阶段，政府应加大投入、加强扶持，推动实验研究，推广实践应用。"
         android:textColor="#000" />
 
 </LinearLayout>

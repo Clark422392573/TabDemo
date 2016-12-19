@@ -39,7 +39,7 @@
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="翔哥厨房(城阳店)"
+            android:text="农作物多样性种植提高"
             android:textColor="#000"
             android:textSize="18sp" />
 
@@ -48,7 +48,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="人均 ￥76" />
+            android:text="成果所属单位: 中国农业大学" />
     </LinearLayout>
 
 
@@ -62,7 +62,7 @@
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
         android:paddingTop="5dp"
-        android:text="买单"
+        android:text="我要投资"
         android:textColor="#fff" />
 
 </RelativeLayout>

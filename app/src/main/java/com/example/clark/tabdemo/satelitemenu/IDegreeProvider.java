@@ -1,4 +1,4 @@
-package com.example.clark.tabdemo.view;
+package com.example.clark.tabdemo.satelitemenu;
 
 /**
  * Interface for providing degrees between satellites. 

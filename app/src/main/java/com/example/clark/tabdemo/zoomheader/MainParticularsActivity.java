@@ -40,7 +40,7 @@ public class MainParticularsActivity extends AppCompatActivity {
         ButterKnife.inject(this);
 
         particularsViewpager.setAdapter(new Adapter());
-        particularsViewpager.setOffscreenPageLimit(4);
+//        particularsViewpager.setOffscreenPageLimit(4);
         CtrlLinearLayoutManager layoutManager = new CtrlLinearLayoutManager(this);
 
         //未展开禁止滑动
@@ -80,13 +80,10 @@ public class MainParticularsActivity extends AppCompatActivity {
                     Toast.makeText(MainParticularsActivity.this, "buy", Toast.LENGTH_SHORT).show();
                 }
             });
-            views.add(View.inflate(MainParticularsActivity.this, R.layout.item_img, null));
-
-            views.add(View.inflate(MainParticularsActivity.this, R.layout.item_img, null));
         }
 
         private ArrayList<View> views;
-        private int[] imgs = {R.mipmap.cate, R.mipmap.pictwo, R.mipmap.picthree};
+        private int[] imgs = {R.mipmap.cate};
 
         @Override
         public int getCount() {
@@ -100,7 +97,7 @@ public class MainParticularsActivity extends AppCompatActivity {
 
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
-            views.get(position).findViewById(R.id.imageView).setBackgroundResource(imgs[position]);
+            views.get(0).findViewById(R.id.imageView).setBackgroundResource(imgs[position]);
             container.addView(views.get(position));
 
             return views.get(position);

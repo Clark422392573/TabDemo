@@ -1,4 +1,4 @@
-package com.example.clark.tabdemo.view;
+package com.example.clark.tabdemo.satelitemenu;
 
 /**
  * Provide the degree between each satellite as an array of degrees. Can be provided to 

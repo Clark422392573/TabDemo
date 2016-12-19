@@ -1,4 +1,4 @@
-package com.example.clark.tabdemo.view;
+package com.example.clark.tabdemo.satelitemenu;
 
 /**
  * Linearly distributes satellites in the given total degree.

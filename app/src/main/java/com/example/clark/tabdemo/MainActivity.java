@@ -18,7 +18,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -31,8 +30,8 @@ import android.widget.Toast;
 import com.example.clark.tabdemo.listener.OnTabSelectListener;
 import com.example.clark.tabdemo.personaldata.PersonalDataActivity;
 import com.example.clark.tabdemo.utils.ViewFindUtils;
-import com.example.clark.tabdemo.view.SatelliteMenu;
-import com.example.clark.tabdemo.view.SatelliteMenuItem;
+import com.example.clark.tabdemo.satelitemenu.SatelliteMenu;
+import com.example.clark.tabdemo.satelitemenu.SatelliteMenuItem;
 
 import java.util.ArrayList;
 import java.util.List;

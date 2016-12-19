@@ -1,4 +1,4 @@
-package com.example.clark.tabdemo.view;
+package com.example.clark.tabdemo.satelitemenu;
 
 import android.content.Context;
 import android.content.res.TypedArray;

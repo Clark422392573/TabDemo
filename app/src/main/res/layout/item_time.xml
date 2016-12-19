@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="100元代金券"
+            android:text="生物技术可省八成杀虫剂"
             android:textColor="#000"
             android:textSize="16sp" />
 
@@ -26,13 +26,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
-            android:text="周一至周日 部分商品可用|免预约" />
+            android:text="国际期刊《Nature(自然)》子刊《Nature plants》刊出" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
-            android:text="￥89"
+            android:text="￥10000"
             android:textColor="#39c4b6"
             android:textSize="18sp" />
     </LinearLayout>
@@ -48,7 +48,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="已售26417" />
+            android:text="已有26417人阅读" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -59,7 +59,7 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:paddingTop="5dp"
-            android:text="购买"
+            android:text="我要投资"
             android:textColor="#ffa400" />
 
     </LinearLayout>

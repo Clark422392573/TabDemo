@@ -16,7 +16,6 @@
         android:paddingTop="16dp">
 
         <ImageView
-            android:id="@+id/dhjjjjjjjj"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:src="@mipmap/location" />
@@ -27,7 +26,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:text="番禺区番禺大道北543号龙美段(天安科技圆旁)"
+            android:text="城阳区长城路19号楼(链科技)"
             android:textColor="#000"
             android:textSize="16sp" />
 

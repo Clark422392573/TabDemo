@@ -1,4 +1,4 @@
-package com.example.clark.tabdemo.view;
+package com.example.clark.tabdemo.satelitemenu;
 
 import android.graphics.drawable.Drawable;
 import android.view.animation.Animation;
