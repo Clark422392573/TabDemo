@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="bottom"
-    android:background="@android:color/darker_gray"
+    android:background="@mipmap/bottom"
     android:orientation="horizontal">
 
     <RadioButton
@@ -28,6 +28,17 @@
         android:gravity="center"
         android:drawableTop="@drawable/hot_select"
         android:text="资讯" />
+
+    <RadioButton
+        android:id="@+id/rb_fabu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:button="@null"
+        android:checked="true"
+        android:gravity="center"
+        android:drawableTop="@mipmap/icon_fabu"
+        android:text="发布" />
 
     <RadioButton
         android:id="@+id/rb_service"

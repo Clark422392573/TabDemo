@@ -4,7 +4,7 @@
     android:id="@+id/tool_bar"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    android:background="@android:color/darker_gray">
+    android:background="#2C97DE">
 
     <com.example.clark.tabdemo.utils.RoundImage
         android:id="@+id/img_main_icon"
@@ -22,8 +22,9 @@
         android:layout_height="32dp"
         android:layout_centerInParent="true"
         android:layout_marginTop="15dp"
-        tl:tl_bar_color="#ffffff"
-        tl:tl_indicator_color="#2C97DE"
+        tl:tl_bar_color="#2C97DE"
+        tl:tl_indicator_color="#ffffff"
+        tl:tl_textSelectColor="#2C97DE"
         tl:tl_indicator_corner_radius="8dp"
         tl:tl_tab_padding="20dp" />
 
@@ -34,6 +35,6 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="@dimen/activity_horizontal_margin"
-        android:src="@mipmap/plus" />
+        android:src="@mipmap/ic_menu" />
 
 </RelativeLayout>
