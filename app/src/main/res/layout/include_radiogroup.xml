@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rg_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@android:color/darker_gray"
+    android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/rb_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:button="@null"
+        android:checked="true"
+        android:gravity="center"
+        android:drawableTop="@drawable/home_select"
+        android:text="首页" />
+
+    <RadioButton
+        android:id="@+id/rb_hot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:button="@null"
+        android:checked="true"
+        android:gravity="center"
+        android:drawableTop="@drawable/hot_select"
+        android:text="资讯" />
+
+    <RadioButton
+        android:id="@+id/rb_service"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:button="@null"
+        android:checked="true"
+        android:gravity="center"
+        android:drawableTop="@drawable/service_select"
+        android:text="服务" />
+
+    <RadioButton
+        android:id="@+id/rb_personal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:button="@null"
+        android:checked="true"
+        android:gravity="center"
+        android:drawableTop="@drawable/personal_select"
+        android:text="我" />
+
+</RadioGroup>

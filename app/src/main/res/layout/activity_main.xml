@@ -8,7 +8,6 @@
     android:fitsSystemWindows="true">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tl="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,43 +15,7 @@
         android:orientation="vertical"
         tools:context=".MainActivity">
 
-        <RelativeLayout
-            android:id="@+id/tool_bar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@android:color/darker_gray">
-
-            <com.example.clark.tabdemo.utils.RoundImage
-                android:id="@+id/img_main_icon"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:src="@mipmap/icon_me" />
-
-            <!-- indicator_corner_radius 圆角 -->
-            <com.example.clark.tabdemo.tablayout.SegmentTabLayout
-                android:id="@+id/Segment_tab_layout"
-                android:layout_width="wrap_content"
-                android:layout_height="32dp"
-                android:layout_centerInParent="true"
-                android:layout_marginTop="15dp"
-                tl:tl_bar_color="#ffffff"
-                tl:tl_indicator_color="#2C97DE"
-                tl:tl_indicator_corner_radius="8dp"
-                tl:tl_tab_padding="20dp" />
-
-            <ImageView
-                android:id="@+id/img_add"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:src="@mipmap/plus" />
-
-        </RelativeLayout>
+        <include layout="@layout/include_toolbar" />
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -61,21 +24,24 @@
             <android.support.v4.view.ViewPager
                 android:id="@+id/view_pager"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="wrap_content" />
 
             <com.example.clark.tabdemo.satelitemenu.SatelliteMenu
                 android:id="@+id/menu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|right"
-                android:layout_margin="20dp"
+                android:layout_marginBottom="80dp"
+                android:layout_marginRight="30dp"
                 sat:closeOnClick="ture"
                 sat:expandDuration="500"
                 sat:mainImage="@mipmap/ic_launcher"
                 sat:satelliteDistance="270dp"
                 sat:totalSpacingDegree="90" />
 
+            <include layout="@layout/include_radiogroup" />
         </FrameLayout>
+
 
     </LinearLayout>
 

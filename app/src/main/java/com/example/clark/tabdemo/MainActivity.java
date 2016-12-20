@@ -24,6 +24,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.PopupWindow;
+import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout mDrawerLayout;
 
-    private String[] mTitles = {"首页", "消息"};
+    private String[] mTitles = {"技术信息", "技术需求"};
     private View mDecorView;
     private ArrayList<Fragment> mFragments = new ArrayList<>();
 
@@ -139,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
                             break;
 
                         case R.id.nav_messages:
-                            Toast.makeText(MainActivity.this, "消息", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, "资讯", Toast.LENGTH_SHORT).show();
                             viewPager.setCurrentItem(1);
                             break;
 
