@@ -64,7 +64,7 @@ public class MainParticularsActivity extends AppCompatActivity {
             }
         }
 
-        //隐藏底部栏]
+        //隐藏底部栏
         bottomY = (int) rlayoutParticularsBottom.getY();
         rlayoutParticularsBottom.setTranslationY(rlayoutParticularsBottom.getY() + rlayoutParticularsBottom.getHeight());
         particularsZoomheader.setBottomView(rlayoutParticularsBottom, bottomY);

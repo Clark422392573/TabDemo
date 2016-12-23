@@ -26,6 +26,18 @@ public class MainFragment extends Fragment {
     @InjectView(R.id.fragment_main)
     RelativeLayout fragmentMain;
 
+    public static MainFragment getInstance(int position) {
+        MainFragment mainFragment = new MainFragment();
+        Bundle bundle = new Bundle();
+        bundle.putString("pos", String.valueOf(position));
+        // Activity重新创建时，会重新构建它所管理的Fragment，
+        // 原先的Fragment的字段值将会全部丢失，
+        // 但是通过 Fragment.setArguments(Bundle bundle)方法设置的bundle会保留下来。
+        // 所以尽量使用 Fragment.setArguments(Bundle bundle)方式来传递参数
+        mainFragment.setArguments(bundle);
+        return mainFragment;
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main, container, false);

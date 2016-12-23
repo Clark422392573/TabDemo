@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.example.clark.tabdemo.ShowFragment">
+
+    <com.example.clark.tabdemo.tablayout.SegmentTabLayout
+        android:id="@+id/show_fragment_tablayout"
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_gravity="center_horizontal"
+        tl:tl_indicator_anim_enable="true"
+        tl:tl_indicator_bounce_enable="true"
+        tl:tl_indicator_color="@android:color/holo_blue_light"
+        tl:tl_tab_padding="20dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/show_fragment_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/activity_horizontal_margin"/>
+
+</LinearLayout>

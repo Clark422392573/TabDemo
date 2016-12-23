@@ -16,7 +16,7 @@
         <!-- 指定消失的动画xml -->
     </style>
 
-    <!-- 仿饿了么的Style -->
+    <!-- 仿饿了么的 Style -->
     <style name="translucent" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@color/translucent_background</item>
         <item name="android:windowIsTranslucent">true</item>

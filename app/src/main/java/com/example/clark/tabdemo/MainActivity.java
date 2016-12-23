@@ -30,6 +30,7 @@ import android.widget.Toast;
 
 import com.example.clark.tabdemo.listener.OnTabSelectListener;
 import com.example.clark.tabdemo.personaldata.PersonalDataActivity;
+import com.example.clark.tabdemo.show.ShowActivity;
 import com.example.clark.tabdemo.utils.ViewFindUtils;
 import com.example.clark.tabdemo.satelitemenu.SatelliteMenu;
 import com.example.clark.tabdemo.satelitemenu.SatelliteMenuItem;
@@ -80,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
         sateMenu();
 
-        mFragments.add(new MainFragment());
+        mFragments.add(new ShowFragment());
         mFragments.add(new NextFragment());
 
         mDecorView = getWindow().getDecorView();
@@ -146,6 +147,10 @@ public class MainActivity extends AppCompatActivity {
 
                         case R.id.nav_settings:
                             startActivityForResult(new Intent(MainActivity.this, PersonalDataActivity.class), 202);
+                            break;
+
+                        case R.id.nav_matter:
+                            startActivity(new Intent(MainActivity.this, ShowActivity.class));
                             break;
                     }
 

@@ -18,8 +18,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".personaldata.PersonalDataActivity" />
-        <activity android:name=".zoomheader.MainParticularsActivity"
-            android:theme="@style/translucent"></activity>
+        <activity
+            android:name=".zoomheader.MainParticularsActivity"
+            android:theme="@style/translucent" />
+        <activity android:name=".im.IMActivity" />
+        <activity android:name=".show.ShowActivity"></activity>
     </application>
 
 </manifest>
