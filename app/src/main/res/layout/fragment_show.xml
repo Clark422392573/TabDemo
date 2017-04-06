@@ -8,10 +8,12 @@
 
     <com.example.clark.tabdemo.tablayout.SegmentTabLayout
         android:id="@+id/show_fragment_tablayout"
-        android:layout_width="400dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginTop="@dimen/activity_horizontal_margin"
         android:layout_gravity="center_horizontal"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
         tl:tl_indicator_anim_enable="true"
         tl:tl_indicator_bounce_enable="true"
         tl:tl_indicator_color="@android:color/holo_blue_light"

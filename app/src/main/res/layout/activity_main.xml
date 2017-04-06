@@ -39,7 +39,6 @@
                 sat:satelliteDistance="270dp"
                 sat:totalSpacingDegree="90" />
 
-            <include layout="@layout/include_radiogroup" />
         </FrameLayout>
 
 
